@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quadratic Equation Calculator</title>
+</head>
+<body>
+    <main>
+        <h1 style="text-align: center">Welcome to Quadratic Equation Calculator</h1>
+        <h3>Enter coefficients for quadratic equation:</h3>
+        <form action="/plot" method="get">
+            <label for="a">Coefficient a:</label>
+            <input type="text" id="a" name="a" required><br><br>
+            <label for="b">Coefficient b:</label>
+            <input type="text" id="b" name="b" required><br><br>
+            <label for="c">Coefficient c:</label>
+            <input type="text" id="c" name="c" required><br><br>
+            <button type="submit">Plot</button>
+        </form>
+        <p>Roots: {{ roots }}</p>
+        <img src="data:image/png;base64, {{ plot }}" alt="plot" onerror="this.style.visibility = 'hidden'">
+    </main>
+    <footer>
+        <p style="font-size: 10px">by Egor Dontsov, 2023</p>
+    </footer>
+</body>
+</html>
